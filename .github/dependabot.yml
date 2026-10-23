@@ -1,0 +1,13 @@
+# Le dépôt ne contient que des cartes HTML/SVG : aucune dépendance à mettre à jour.
+# Seules les actions GitHub des workflows de contrôle sont suivies (même principe que les autres projets de l'organisation).
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: dev
+    schedule: { interval: monthly }
+    commit-message: { prefix: ci }
+    groups:
+      actions:
+        patterns: ["*"]
